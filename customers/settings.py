@@ -25,7 +25,7 @@ SECRET_KEY = 'oc@59+@xymeq(%lb4$a78oux22_1k^zf&ck@=yv0n4&%0s69sf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['customers-dev2.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
