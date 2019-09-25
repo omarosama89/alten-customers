@@ -1,4 +1,5 @@
 import requests
+# import pdb
 
 REMOTE_URL = 'http://localhost:8000/server/customers/'
 
@@ -23,5 +24,6 @@ class RemoteCustomerApi:
             'first_name': customer.first_name,
             'last_name': customer.last_name,
         }
+        # pdb.set_trace()
         requests.put(url=REMOTE_URL + '%d/' % id, data=data)
 
