@@ -1,4 +1,5 @@
 import requests
+from requests.exceptions import ConnectionError
 # import pdb
 
 REMOTE_URL = 'http://localhost:8000/server/customers/'
