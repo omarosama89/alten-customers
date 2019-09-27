@@ -13,10 +13,13 @@ class RemoteCustomerApi:
             'last_name': customer.last_name,
             'remote_id': customer.id
         }
-        res = requests.post(url=REMOTE_URL, data=data)
-        remote_id = res.json()['id']
-        customer.remote_id = remote_id
-        customer.save()
+        try:
+            res = requests.post(url=REMOTE_URL, data=data)
+            remote_id = res.json()['id']
+            customer.remote_id = remote_id
+            customer.save()
+        except ConnectionError:
+            pass
 
     @staticmethod
     def update(customer):
@@ -26,5 +29,8 @@ class RemoteCustomerApi:
             'last_name': customer.last_name,
         }
         # pdb.set_trace()
-        requests.put(url=REMOTE_URL + '%d/' % id, data=data)
+        try:
+            requests.put(url=REMOTE_URL + '%d/' % id, data=data)
+        except ConnectionError:
+            pass
 
