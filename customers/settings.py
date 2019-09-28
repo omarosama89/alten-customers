@@ -103,7 +103,8 @@ else:
             'NAME': 'customers',
             'USER': 'customersuser',
             'PASSWORD': '123',
-            'HOST': 'localhost',
+            'HOST': 'customers_db',     # docker
+            # 'HOST': 'localhost',      # development
             'PORT': '5432',
         }
     }
