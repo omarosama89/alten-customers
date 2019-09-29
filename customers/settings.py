@@ -103,8 +103,7 @@ else:
             'NAME': 'customers',
             'USER': 'customersuser',
             'PASSWORD': '123',
-            'HOST': 'customers_db',     # docker
-            # 'HOST': 'localhost',      # development
+            'HOST': os.environ.get('DOCKER_DB_HOSTNAME') or 'localhost',
             'PORT': '5432',
         }
     }
@@ -150,3 +149,4 @@ CORS_ORIGIN_ALLOW_ALL = True
 # STATIC_ROOT = os.path.join(BASE_DIR, "..", "www", "static")
 STATIC_ROOT=os.path.join(BASE_DIR,'static/')
 STATIC_URL = '/static/'
+

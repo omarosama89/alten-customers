@@ -1,9 +1,12 @@
 import requests
 from requests.exceptions import ConnectionError
 # import pdb
+import os
 
-REMOTE_URL = 'http://localhost:8000/server/customers/'
+CUSTOMER_API_URL =  'http://%s:8000' % (os.environ.get('DOCKER_VEHICLES_API_HOSTNAME') or 'localhost')
 
+
+REMOTE_URL = CUSTOMER_API_URL + '/server/customers/'
 
 class RemoteCustomerApi:
     @staticmethod
@@ -33,4 +36,3 @@ class RemoteCustomerApi:
             requests.put(url=REMOTE_URL + '%d/' % id, data=data)
         except ConnectionError:
             pass
-
