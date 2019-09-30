@@ -4,7 +4,6 @@
     <list default="true" id="c8b71aa7-633d-47c5-82fe-f9f5c9bf160c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customers/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/customers/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/remote_customer_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/remote_customer_api.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,10 +29,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customers/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
-              <caret line="151" column="46" selection-start-line="151" selection-start-column="46" selection-end-line="151" selection-end-column="46" />
+            <state relative-caret-position="469">
+              <caret line="137" column="15" lean-forward="true" selection-start-line="137" selection-start-column="15" selection-end-line="137" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -41,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+            <state relative-caret-position="450">
+              <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -61,6 +69,7 @@
       <find>Namespace</find>
       <find>python:staticfiles</find>
       <find>vehicles</find>
+      <find>DOCKER_VEHICLES_API_HOSTNAME</find>
     </findStrings>
     <replaceStrings>
       <replace>customers_code/</replace>
@@ -95,7 +104,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,12 +130,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../alten-vehicles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -180,17 +189,18 @@
       <updated>1569678335963</updated>
       <workItem from="1569678338584" duration="2887000" />
       <workItem from="1569696828602" duration="24301000" />
+      <workItem from="1569881237629" duration="666000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33873000" />
+    <option name="totallyTimeSpent" value="34539000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1987" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2744881" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27780852" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -298,20 +308,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.elasticbeanstalk/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.elasticbeanstalk/config.yml" />
     <entry file="file://$PROJECT_DIR$/.ebextensions/django.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -345,18 +342,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        <state relative-caret-position="450">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/customers/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="151" column="46" selection-start-line="151" selection-start-column="46" selection-end-line="151" selection-end-column="46" />
+        <state relative-caret-position="469">
+          <caret line="137" column="15" lean-forward="true" selection-start-line="137" selection-start-column="15" selection-end-line="137" selection-end-column="15" />
         </state>
       </provider>
     </entry>
