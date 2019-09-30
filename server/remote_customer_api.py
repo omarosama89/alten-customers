@@ -1,9 +1,9 @@
 import requests
 from requests.exceptions import ConnectionError
 # import pdb
-import os
+from django.conf import settings
 
-CUSTOMER_API_URL =  'http://%s:8000' % (os.environ.get('DOCKER_VEHICLES_API_HOSTNAME') or 'localhost')
+CUSTOMER_API_URL = settings.REMOTE_CUSTOMER_API_HOST
 
 
 REMOTE_URL = CUSTOMER_API_URL + '/server/customers/'
@@ -32,7 +32,8 @@ class RemoteCustomerApi:
             'last_name': customer.last_name,
         }
         # pdb.set_trace()
-        try:
-            requests.put(url=REMOTE_URL + '%d/' % id, data=data)
-        except ConnectionError:
-            pass
+        requests.put(url=REMOTE_URL + '%d/' % id, data=data)
+        # try:
+        #     requests.put(url=REMOTE_URL + '%d/' % id, data=data)
+        # except ConnectionError:
+        #     pass
