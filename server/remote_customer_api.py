@@ -32,8 +32,8 @@ class RemoteCustomerApi:
             'last_name': customer.last_name,
         }
         # pdb.set_trace()
-        requests.put(url=REMOTE_URL + '%d/' % id, data=data)
-        # try:
-        #     requests.put(url=REMOTE_URL + '%d/' % id, data=data)
-        # except ConnectionError:
-        #     pass
+        # requests.put(url=REMOTE_URL + '%d/' % id, data=data)
+        try:
+            requests.put(url=REMOTE_URL + '%d/' % id, data=data)
+        except ConnectionError:
+            pass
